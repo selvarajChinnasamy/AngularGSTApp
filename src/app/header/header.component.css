@@ -1,0 +1,13 @@
+
+.heading{
+  color: #55696B;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-primary {
+  background: #009dda;
+}
+.btn{
+  border: none;
+  border-radius: 0px;
+}

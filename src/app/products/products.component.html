@@ -1,0 +1,26 @@
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Name</th>
+        <th scope="col">GST (%)</th>
+        <th scope="col">Price (without GST)</th>
+        <th scope="col">Price (with GST)</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="products.length">
+      <tr *ngFor="let product of products">
+        <td>{{product.date | date:'d-MMM-y h:mm a'}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.gstPercentage}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.gstAdded}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="no-data-container" *ngIf="!products.length">
+    No Date Found!
+  </div>
+  <div [chart]="chart"></div>
+</div>

@@ -1,0 +1,14 @@
+.table .thead-dark th {
+  background-color: #009ee0;
+  border: none;
+}
+.no-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #cd5c5c;
+}
+.container{
+  margin-bottom: 10%;
+}

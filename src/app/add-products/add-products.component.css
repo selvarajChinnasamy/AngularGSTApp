@@ -1,0 +1,20 @@
+.modal{
+  display: block;
+}
+.modal-content{
+  border: none;
+  border-radius: 0;
+}
+.btn-primary {
+  background: #009dda;
+}
+.btn{
+  border: none;
+  border-radius: 0px;
+}
+.modal-header{
+  background: #009dda;
+}
+.modal-header h5{
+  color: #ffffff;
+}

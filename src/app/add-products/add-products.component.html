@@ -1,0 +1,53 @@
+<div class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Product</h5>
+        <button type="button" class="close" (click)="close()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="productForm" class="modal-body">
+
+        <div class="form-group">
+          <input formControlName="name" type="test" class="form-control" placeholder="Item Name">
+
+          <span class="text-danger" *ngIf="(formSubmitted || productForm['controls']['name'].touched) && productForm['controls']['name'].invalid">
+            <small *ngIf="productForm['controls']['name']['errors']['required']">Required Field</small>
+          </span>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">₹</span>
+            </div>
+            <input formControlName="price" type="text" class="form-control" placeholder="Item Price">
+            <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+          <span class="text-danger" *ngIf="(formSubmitted || productForm['controls']['price'].touched) && productForm['controls']['price'].invalid">
+            <small *ngIf="productForm['controls']['price']['errors']['required']">Required Field</small>
+            <small *ngIf="productForm['controls']['price']['errors']['pattern']">Should be Number</small>
+          </span>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input formControlName="gstPercentage" type="text" class="form-control" placeholder="Item Gst">
+            <div class="input-group-append">
+              <span class="input-group-text">%</span>
+            </div>
+          </div>
+          <span class="text-danger" *ngIf="(formSubmitted || productForm['controls']['gstPercentage'].touched) && productForm['controls']['gstPercentage'].invalid">
+            <small *ngIf="productForm['controls']['gstPercentage']['errors']['required']">Required Field</small>
+            <small *ngIf="productForm['controls']['gstPercentage']['errors']['pattern']">Should be Number</small>
+          </span>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="onSubmit()">Save product</button>
+      </div>
+    </div>
+  </div>
+</div>

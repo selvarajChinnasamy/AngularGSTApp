@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API_ENDPOINT: 'http://18.188.100.43:3002/api',
+  MATH_OPP: 'http://api.mathjs.org/v4'
 };
 
 /*
